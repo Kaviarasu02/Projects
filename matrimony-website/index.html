@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>matrimony-index</title>
+    <link rel="stylesheet" type="text/css" href="styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="main">
+      <div class="header-card" id="head-top">
+        <header>
+          <div class="logo">
+            <img src="img/logo.png" alt="matrimony_logo" />
+          </div>
+          <div class="company-name">
+            <h1>Matrimony</h1>
+          </div>
+
+          <!-- <div class="login">
+            <button class="btn">
+              <a href="login.html">Login <i class="fas fa-user"></i></a>
+            </button>
+            <button class="btn">
+              <a href="register.html"
+                >Register <i class="fa-solid fa-user-plus"></i
+              ></a>
+            </button>
+          </div> -->
+             <div class="profile">
+            <img
+              id="profile"
+              src=""
+              alt="Profile Image"
+              class="profile-picture"
+              onclick="openNav2()"
+            />
+          </div>
+          <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+            >&#9776;</span
+          >
+       
+        </header>
+      </div>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <a href="#head-top">Home</a>
+        <a href="#section1">Blog</a>
+        <a href="/male-profile.html">Male Profiles</a>
+        <a href="/female-profile.html">Female Profiles</a>
+        <a href="#about">About Us</a>
+        <a href="#">Contacts</a>
+      </div>
+
+      <div id="mySidenav2" class="sidenav-2">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()"
+          >&times;</a
+        >
+        <a
+          href="#"
+          onclick="document.getElementById('dashboard').style.display = 'block'; document.getElementById('mySidenav2').style.width = '0';"
+          >Profile Settings</a
+        >
+        <a href="#">Logout</a>
+      </div>
+
+      <div class="dash-container">
+        <main class="content">
+          <div id="dashboard" class="dashboard hidden">
+            <div class="close-container">
+              <button class="close-btn" onclick="closeDashboard()">X</button>
+            </div>
+            <div class="profile-section">
+              <div class="image-upload">
+                <input type="file" id="fileInput" accept="image/*" />
+                <img id="profileImage" src="" alt="Profile Image" />
+              </div>
+              <div class="img-btn">
+                <button
+                  id="uploadImageButton"
+                  onclick="document.getElementById('fileInput').click()"
+                >
+                  Upload Image
+                </button>
+                <button id="removeImageButton">Remove Image</button>
+              </div>
+              <div class="user-details">
+                <h2>User Profile</h2>
+                <p><strong>Name:</strong> <span id="Name"></span></p>
+                <p>
+                  <strong>Middle Name:</strong> <span id="middleName"></span>
+                </p>
+                <p><strong>Last Name:</strong> <span id="lastName"></span></p>
+                <p><strong>Gender:</strong> <span id="gender"></span></p>
+                <p><strong>Age:</strong> <span id="age"></span></p>
+                <p>
+                  <strong>Profession:</strong>
+                  <span id="profession"></span>
+                </p>
+                <p><strong>Location:</strong> <span id="location"></span></p>
+                <p>
+                  <strong>Religion:</strong>
+                  <span id="religion"></span>
+                </p>
+                <p>
+                  <strong>Community:</strong>
+                  <span id="community"></span>
+                </p>
+                <p><strong>Caste:</strong> <span id="caste"></span></p>
+                <p>
+                  <strong>Mobile No:</strong>
+                  <span id="mobileNo"></span>
+                </p>
+                <p>
+                  <strong>Email:</strong>
+                  <span id="email"></span>
+                </p>
+                <div class="img-btn">
+                  <button id="updateButton" onclick="updateProfile()">
+                    Update Profile
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <script>
+        function closeDashboard() {
+          document.getElementById("dash-container").style.display = "none";
+        }
+      </script>
+
+      <hr />
+
+      <main>
+        <div class="container">
+          <section class="hero">
+            <h1>Matrimonial Search.</h1>
+            <h2>
+              Best Matching <br />
+              <span>Couples</span>
+            </h2>
+            <p>
+              Onec Consequat Sapien Ut Leo Cursus Rhoncus. Nullam Dui Mi,
+              Vulputate Ac Metus Semper Nullam Dui Mi. Vestibulum Ante. Morbi At
+              Dui Nisl.
+            </p>
+            <a href="#">Read more</a>
+          </section>
+
+          <section class="blog" id="section1">
+            <div class="text">
+              <div class="text-animation">
+                <h1>Our Customers</h1>
+              </div>
+              <h2>Happy</h2>
+              <h2>Stories...</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                dignissimos hic harum sapiente nostrum numquam corporis maiores
+                perspiciatis aliquid provident itaque veniam aut corrupti ipsa
+                fugit quasi. Repellendus...
+              </p>
+            </div>
+
+            <section class="blog-card">
+              <div class="card-container">
+                <article class="card">
+                  <div class="front-content">
+                    <img src="img/index-card/card1.jpg" alt="couple_image1" />
+                  </div>
+                  <div class="content">
+                    <p class="heading">Card Hover</p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipii voluptas
+                      ten mollitia pariatur odit, ab minus ratione adipisci
+                      accusamus vel est excepturi laboriosam magnam
+                      necessitatibus dignissimos molestias.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="card-container">
+                <div class="card">
+                  <div class="front-content">
+                    <img src="img/index-card/card2.jpg" alt="couple_image1" />
+                  </div>
+                  <div class="content">
+                    <p class="heading">Card Hover</p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipii voluptas
+                      ten mollitia pariatur odit, ab minus ratione adipisci
+                      accusamus vel est excepturi laboriosam magnam
+                      necessitatibus dignissimos molestias.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-container">
+                <div class="card">
+                  <div class="front-content">
+                    <img src="img/index-card/card3.jpg" alt="couple_image1" />
+                  </div>
+                  <div class="content">
+                    <p class="heading">Card Hover</p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipii voluptas
+                      ten mollitia pariatur odit, ab minus ratione adipisci
+                      accusamus vel est excepturi laboriosam magnam
+                      necessitatibus dignissimos molestias.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-container">
+                <div class="card">
+                  <div class="front-content">
+                    <img src="img/index-card/card4.jpg" alt="couple_image1" />
+                  </div>
+                  <div class="content">
+                    <p class="heading">Card Hover</p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipii voluptas
+                      ten mollitia pariatur odit, ab minus ratione adipisci
+                      accusamus vel est excepturi laboriosam magnam
+                      necessitatibus dignissimos molestias.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+        </div>
+
+        <section class="rating">
+          <div class="rating-title">
+            <h1>Reviews📝</h1>
+          </div>
+
+          <div class="rating-card left">
+            <div class="rating-text">
+              <h1>Name</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                dignissimos hic harum sapiente nostrum numquam corporis maiores
+                perspiciatis aliquid provident itaque veniam aut corrupti ipsa
+                fugit quasi. Repellendus...
+              </p>
+
+              <div class="rating-stars">
+                <input type="radio" id="star5" name="rating" value="5" />
+                <label for="star5"></label>
+                <input type="radio" id="star4" name="rating" value="4" />
+                <label for="star4"></label>
+                <input type="radio" id="star3" name="rating" value="3" />
+                <label for="star3"></label>
+                <input type="radio" id="star2" name="rating" value="2" />
+                <label for="star2"></label>
+                <input type="radio" id="star1" name="rating" value="1" />
+                <label for="star1"></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="rating-card right">
+            <div class="rating-text">
+              <h1>Name</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                dignissimos hic harum sapiente nostrum numquam corporis maiores
+                perspiciatis aliquid provident itaque veniam aut corrupti ipsa
+                fugit quasi. Repellendus...
+              </p>
+              <div class="rating-stars">
+                <input type="radio" id="star5" name="rating" value="5" />
+                <label for="star5"></label>
+                <input type="radio" id="star4" name="rating" value="4" />
+                <label for="star4"></label>
+                <input type="radio" id="star3" name="rating" value="3" />
+                <label for="star3"></label>
+                <input type="radio" id="star2" name="rating" value="2" />
+                <label for="star2"></label>
+                <input type="radio" id="star1" name="rating" value="1" />
+                <label for="star1"></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="rating-card left">
+            <div class="rating-text">
+              <h1>Name</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                dignissimos hic harum sapiente nostrum numquam corporis maiores
+                perspiciatis aliquid provident itaque veniam aut corrupti ipsa
+                fugit quasi. Repellendus...
+              </p>
+              <div class="rating-stars">
+                <input type="radio" id="star5" name="rating" value="5" />
+                <label for="star5"></label>
+                <input type="radio" id="star4" name="rating" value="4" />
+                <label for="star4"></label>
+                <input type="radio" id="star3" name="rating" value="3" />
+                <label for="star3"></label>
+                <input type="radio" id="star2" name="rating" value="2" />
+                <label for="star2"></label>
+                <input type="radio" id="star1" name="rating" value="1" />
+                <label for="star1"></label>
+              </div>
+            </div>
+          </div>
+          <div class="rating-card right">
+            <div class="rating-text">
+              <h1>Name</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                dignissimos hic harum sapiente nostrum numquam corporis maiores
+                perspiciatis aliquid provident itaque veniam aut corrupti ipsa
+                fugit quasi. Repellendus...
+              </p>
+              <div class="rating-stars">
+                <input type="radio" id="star5" name="rating" value="5" />
+                <label for="star5"></label>
+                <input type="radio" id="star4" name="rating" value="4" />
+                <label for="star4"></label>
+                <input type="radio" id="star3" name="rating" value="3" />
+                <label for="star3"></label>
+                <input type="radio" id="star2" name="rating" value="2" />
+                <label for="star2"></label>
+                <input type="radio" id="star1" name="rating" value="1" />
+                <label for="star1"></label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="feedback-form">
+            <h2>Give Your Feedback</h2>
+            <form action="submit_rating.php" method="post">
+              <div class="star-rating">
+                <input type="radio" id="5-stars" name="rating" value="5" />
+                <label for="5-stars" class="fa fa-star"></label>
+                <input type="radio" id="4-stars" name="rating" value="4" />
+                <label for="4-stars" class="fa fa-star"></label>
+                <input type="radio" id="3-stars" name="rating" value="3" />
+                <label for="3-stars" class="fa fa-star"></label>
+                <input type="radio" id="2-stars" name="rating" value="2" />
+                <label for="2-stars" class="fa fa-star"></label>
+                <input type="radio" id="1-star" name="rating" value="1" />
+                <label for="1-star" class="fa fa-star"></label>
+              </div>
+
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="feedback">Feedback</label>
+                <textarea
+                  id="feedback"
+                  name="feedback"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </section>
+
+        <section>
+          <div class="about-container" id="about">
+            <h2>About Us</h2>
+            <p>
+              Welcome to our Matrimony website! We are a trusted and reliable
+              platform that connects people from different backgrounds. Our goal
+              is to facilitate genuine and healthy relationships. We strive to
+              provide a safe and secure environment for our users to express
+              their interests and find compatible matches. We believe in the
+              power of connection and the importance of mutual respect. We are
+              committed to promoting a positive and inclusive community, where
+              individuals can grow, learn, and find love.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <div class="rights">
+        <p>&copy; 2024 Matrimony. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- side navbar -->
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+
+      $(document).ready(function () {
+        $("#profileButton").click(function () {
+          $("#profilePage").toggleClass("hidden");
+        });
+      });
+
+      function openNav2() {
+        document.getElementById("mySidenav2").style.width = "250px";
+        document.getElementById("main").style.marginRightt = "250px";
+      }
+
+      function closeNav2() {
+        document.getElementById("mySidenav2").style.width = "0";
+        document.getElementById("main").style.marginRight = "0";
+      }
+
+      function closeDashboard() {
+        document.getElementById("dashboard").style.display = "none";
+        document.getElementById("mySidenav2").style.width = "0";
+      }
+    </script>
+    <script>
+      const form = document.getElementById("profileForm");
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const formData = new FormData(form);
+        fetch("/upload", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      });
+    </script>
+
+    <script>
+      const fileInput = document.getElementById("fileInput");
+      const profileImage = document.getElementById("profileImage");
+      const removeImageButton = document.getElementById("removeImageButton");
+      fileInput.addEventListener("change", () => {
+        const file = fileInput.files[0];
+        const reader = new FileReader();
+        reader.onload = () => {
+          profileImage.src = reader.result;
+          profile.src = reader.result;
+        };
+        reader.readAsDataURL(file);
+      });
+      removeImageButton.addEventListener("click", () => {
+        profileImage.src = "img/default-avatar.png";
+        fileInput.value = "";
+      });
+    </script>
+  </body>
+</html>

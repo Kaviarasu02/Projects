@@ -1,0 +1,191 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url(/img/background-images/pro-background.jpg);
+
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.header-card {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  border-radius: 10px;
+  background-color: rgba(145, 137, 137, 0.298);
+  backdrop-filter: blur(2erm);
+  display: flex;
+  align-items: center;
+}
+
+.header-card header {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+
+}
+
+.logo {
+  display: flex;
+  width: 100px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 0;
+}
+
+.header-card header h1 {
+  font-size: 2.rem;
+  font-weight: 500;
+  color: #141313;
+  padding-top: 0.5rem;
+}
+
+.header-card header h1:hover {
+  color: #e84393;
+  transition: 0.4s;
+}
+
+.container {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: rgba(142, 136, 136, 0.298);
+  backdrop-filter: blur(2erm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  backdrop-filter: blur(10px);
+  gap: 1rem;
+  align-items: center;
+}
+
+.pro-header {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  padding: 2rem;
+  width: fit-content;
+  text-align: center;
+}
+
+.pro-header :hover {
+  color: #e84393;
+  transition: 0.4s;
+
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1.5rem;
+  gap: 1.5rem;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+  width: 10rem;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.profile-card img {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-details {
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.profile-details h2 {
+  font-size: 1em;
+  color: #333;
+}
+
+.profile-details p {
+  font-size: 0.7em;
+  color: #666;
+  margin: 0.1rem 0;
+}
+
+.star-rating {
+  margin-top: 10px;
+}
+
+.star {
+  font-size: 1.5em;
+  color: #e84393;
+  cursor: pointer;
+}
+
+.profile-card:hover {
+  transform: translateY(-1rem);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+.profile-card:hover .profile-details {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    width: 100%;
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+
+footer {
+  text-align: center;
+  background-color: #d6d0d2;
+  color: #000000;
+  padding: 1.4rem;
+  width: 100%;
+  font-size: 0.6rem;
+}
+
+.rights {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.1rem;
+}
+
+.rights :hover {
+  color: #e84393;
+  transition: 0.4s;
+}
