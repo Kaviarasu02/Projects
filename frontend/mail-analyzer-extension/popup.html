@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mail Analyzer</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <h1>📧 Mail Analyzer</h1>
+  <div id="status">Checking page...</div>
+  <div id="loader" class="loader" style="display: none;"></div>
+  <div id="result" style="display: none;"></div>
+
+  <!-- Animated Toggle Switch -->
+  <label class="switch">
+    <input id="themeToggle" type="checkbox" checked />
+    <div class="slider round">
+      <div class="sun-moon"></div>
+      <div class="stars">
+        <svg class="star" viewBox="0 0 20 20">
+          <path d="M10 0 L12 7 L20 7 L13 11 L15 18 L10 13 L5 18 L7 11 L0 7 L8 7 Z" />
+        </svg>
+      </div>
+    </div>
+  </label>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
